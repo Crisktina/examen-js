@@ -74,28 +74,42 @@
         </button>
       </form>
       <div class="row mb-2">
-        // Mostrar lista de amigos almacenados en la sesión
-
-        <div class="col-md-6">
-          <div
-            class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0"></h3>
-              <h3 class="mb-0"></h3>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <img
-                src=""
-                alt="imagen"
-                class="bd-placeholder-img"
-                width="300"
-                height="250"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              />
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div
+              class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            >
+              <div class="col p-4 d-flex flex-column position-static">
+                <h3 class="mb-0">Nombre grupo</h3>
+                <p class="card-text mb-auto">Descripción</p>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img
+                  src=""
+                  alt="imagen"
+                  class="bd-placeholder-img"
+                  width="200"
+                  height="250"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                />
+              </div>
+              <div class="card-footer text-body-secondary">
+                <p class="mb-2 fw-semibold">Etiquetas:</p>
+                <blockquote class="blockquote mb-3">
+                  <footer class="blockquote-footer fs-6 fst-italic">
+                    Social
+                  </footer>
+                </blockquote>
+                <blockquote class="blockquote mb-3">
+                  <footer class="blockquote-footer fs-6 fst-italic">
+                    Social
+                  </footer>
+                </blockquote>
+              </div>
             </div>
           </div>
+          <div class="invalid-feedback">No hay grupos.</div>
         </div>
         <div class="invalid-feedback">No hay amigos creados.</div>
       </div>
@@ -110,7 +124,7 @@
       </footer>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="./js/fetch.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

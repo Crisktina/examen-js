@@ -54,7 +54,7 @@ function validURL() {
 //un mínim d’una etiqueta i un màxim de tres
 function validarEtiquetas() {
   const input = document.getElementById("selectInput");
-  const divError = document.getElementById("invalid-URL");
+  const divError = document.getElementById("invalid-select");
 
   //convertir las opciones a un array:
   const inputs = input.selectedOptions;
@@ -95,11 +95,12 @@ function success(divError, input) {
 let formulario = document.getElementById("miForm");
 
 formulario.addEventListener("submit", (event) => {
-  event.preventDefault();
-
   // Si no hay errores se envía el formulario
   if (!error) {
     alert("Se está enviando el formulario");
     formulario.submit();
+  } else {
+    event.preventDefault();
+    event.stopPropagation();
   }
 });
