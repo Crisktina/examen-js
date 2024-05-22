@@ -73,35 +73,35 @@
           Buscar
         </button>
       </form>
-      <div class="row mb-2">
-        <div class="row mb-2">
-          <div class="col-md-6">
-            <div
-              class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-            >
-              <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0">Nombre grupo</h3>
-                <p class="card-text mb-auto">Descripción</p>
-              </div>
-              <div class="col-auto d-none d-lg-block">
-                <img
-                  src="https://cdnb.artstation.com/p/assets/images/images/002/559/135/large/jason-kim-pf-perry-02-jason.jpg?1463085970"
-                  alt="imagen"
-                  class="bd-placeholder-img"
-                  width="200"
-                  height="250"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                />
-              </div>
-              <div class="card-footer text-body-secondary">
-                <p class="mb-2 fw-semibold">Etiquetas:</p>
-                <blockquote class="blockquote mb-3">
+      <div class="row mb-2" id="card-container">
+        <div class="col-md-6">
+          <div
+            class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Nombre grupo</h3>
+              <p class="card-text mb-auto">Descripción</p>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="https://cdnb.artstation.com/p/assets/images/images/002/559/135/large/jason-kim-pf-perry-02-jason.jpg?1463085970"
+                alt="imagen"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              />
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="mb-2 fw-semibold">Tags:</p>
+              <div class="d-inline-flex">
+                <blockquote class="blockquote mb-3 me-3">
                   <footer class="blockquote-footer fs-6 fst-italic">
                     Social
                   </footer>
                 </blockquote>
-                <blockquote class="blockquote mb-3">
+                <blockquote class="blockquote mb-3 me-3">
                   <footer class="blockquote-footer fs-6 fst-italic">
                     Social
                   </footer>
@@ -109,9 +109,9 @@
               </div>
             </div>
           </div>
-          <div class="invalid-feedback">No hay grupos.</div>
         </div>
-        <div class="invalid-feedback">No hay amigos creados.</div>
+
+        <div class="invalid-feedback">No hay grupos.</div>
       </div>
     </main>
     <div class="container">

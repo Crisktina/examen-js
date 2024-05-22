@@ -1,13 +1,13 @@
 [
   {
-    "nom": "Tu no ets de Vilanova si no …",
+    "nom": "Tu no ets de Vilanova si no…",
     "descripcio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem.",
     "imatge": "https://cdnb.artstation.com/p/assets/images/images/002/559/135/large/jason-kim-pf-perry-02-jason.jpg?1463085970",
     "tags": ["social"]
   },
   {
-    "nom": "Antics alumnes Escola XXXX",
-    "descripcio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lore",
+    "nom": "Antics alumnes Escola Algo",
+    "descripcio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem.",
     "imatge": "https://th.bing.com/th/id/OIP.LQtHQIkfOm4vYQfIY-2_FQHaHu?rs=1&pid=ImgDetMain",
     "tags": ["social", "records"]
   },
