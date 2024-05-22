@@ -7,9 +7,10 @@ function validName() {
   const divError = document.getElementById("invalid-name");
   if (input.value.trim().length == 0) {
     errorActive(divError, input, mensajeObligatorio);
-    error = true;
+    return false;
   } else {
     success(divError, input);
+    return true;
   }
 }
 //la descripció
@@ -31,13 +32,14 @@ function censoredDescription() {
 
   if (input.value.trim().length == 0) {
     errorActive(divError, input, mensajeObligatorio);
-    error = true;
+    return false;
   } else if (isCensored === 1) {
     let mensaje = "Se han detectado palabras malsonantes no permitidas.";
     errorActive(divError, input, mensaje);
-    error = true;
+    return false;
   } else {
     success(divError, input);
+    return true;
   }
 }
 //una URL per la imatge
@@ -46,9 +48,10 @@ function validURL() {
   const divError = document.getElementById("invalid-URL");
   if (input.value.trim().length == 0) {
     errorActive(divError, input, mensajeObligatorio);
-    error = true;
+    return false;
   } else {
     success(divError, input);
+    return true;
   }
 }
 //un mínim d’una etiqueta i un màxim de tres
@@ -68,14 +71,15 @@ function validarEtiquetas() {
   //validaciones del array
   if (arrSelects.length !== 0 && arrSelects.length <= 3) {
     success(divError, input);
+    return true;
   } else if (arrSelects.length == 0) {
     errorActive(divError, input, mensajeObligatorio);
-    error = true;
+    return false;
   } else {
     let mensaje =
       "Solo puedes seleccionar un mínimo de 1 etiqueta y hasta máximo 3 etiquetas.";
     errorActive(divError, input, mensaje);
-    error = true;
+    return false;
   }
 }
 
@@ -95,12 +99,20 @@ function success(divError, input) {
 let formulario = document.getElementById("miForm");
 
 formulario.addEventListener("submit", (event) => {
+  // Reiniciar error a false
+  let error = false;
+
+  // Validar todos los campos
+  if (!validName()) error = true;
+  if (!censoredDescription()) error = true;
+  if (!validURL()) error = true;
+  if (!validarEtiquetas()) error = true;
+
   // Si no hay errores se envía el formulario
-  if (!error) {
-    alert("Se está enviando el formulario");
-    formulario.submit();
-  } else {
+  if (error) {
     event.preventDefault();
     event.stopPropagation();
+  } else {
+    alert("Se está enviando el formulario");
   }
 });
