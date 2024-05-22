@@ -36,38 +36,40 @@
             <a class="btn btn-primary w-25 py-2 my-3" href="grupos.html">Lista de grupos</a>
           </div>
         </div>
-      </header>
+    </header>
     
     <main class="container mt-5">
-        <form method="POST" class="my-5 row g-2" >
+        <form id="miForm" class="my-5 row g-2" >
             <h1 class="h3 mb-4 fw-normal">Añadir grupo:</h1>
             <div class="form-floating">
-                <input onchange="validName()" type="text" class="form-control" name="nombre" placeholder="nombre">
+                <input id="nameInput" onchange="validName()" type="text" class="form-control" name="nombre" placeholder="nombre">
                 <label for="floatingInput">Nombre:</label>
+                <div id="invalid-name" class="invalid-feedback"></div>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control " name="descripcion" placeholder="texto">
+                <input id="descriptionInput" onchange="censoredDescription()" type="text" class="form-control " name="descripcion" placeholder="texto">
                 <label for="floatingInput">Descripción:</label>
+                <div id="invalid-description" class="invalid-feedback"></div>
             </div>
             <div class="mb-3">
                 <label for="basic-url" class="form-label">Imagen del grupo:</label>
                 <div class="input-group">
                   <span class="input-group-text" id="basic-addon3">https://</span>
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                  <input id="urlInput" onchange="validURL()" type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                 </div>
+                <div id="invalid-URL" class="invalid-feedback"></div>
                 <div class="form-text" id="basic-addon4">Adjunta la url de la imagen.</div>
               </div>
-
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Elije los tags del grupo:</option>
-                <option value="1">Social</option>
-                <option value="2">Records</option>
-                <option value="3">Esport</option>
-                <option value="4">Salut</option>
-                <option value="5">Cinema</option>
-                <option value="6">Entreteniment</option>
+              <label for="basic-url" class="form-label">Elije los tags del grupo:</label>
+            <select id="selectInput" onchange="validarEtiquetas()" class="form-select" aria-label="Default select example" multiple>
+                <option value="Social">Social</option>
+                <option value="Records">Records</option>
+                <option value="Esport">Esport</option>
+                <option value="Salut">Salut</option>
+                <option value="Cinema">Cinema</option>
+                <option value="Entreteniment">Entreteniment</option>
               </select>
-
+              <div id="invalid-select" class="invalid-feedback"></div>
             <button class="btn btn-primary w-100 py-2 my-3" type="submit" name="enviar">Añadir</button>   
         </form>
         <div class="row mb-2">
