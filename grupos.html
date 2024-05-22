@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Grupos</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              aria-hidden="true"
+              class="me-2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              />
+              <circle cx="12" cy="13" r="4" />
+            </svg>
+            <strong>Logo</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="container mt-5">
+      <form method="POST" class="my-5 row g-2" enctype="multipart/form-data">
+        <h1 class="h3 mb-4 fw-normal">Buscar grupos:</h1>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            name="nomBuscar"
+            placeholder="amigo"
+          />
+          <label for="floatingInput">Buscar por nombre del grupo</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            name="cognomBuscar"
+            placeholder="amigo"
+          />
+          <label for="floatingInput">Buscar por tag</label>
+        </div>
+        <button
+          class="btn btn-primary w-100 py-2 my-3"
+          type="submit"
+          name="buscar"
+        >
+          Buscar
+        </button>
+      </form>
+      <div class="row mb-2">
+        // Mostrar lista de amigos almacenados en la sesión
+
+        <div class="col-md-6">
+          <div
+            class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0"></h3>
+              <h3 class="mb-0"></h3>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src=""
+                alt="imagen"
+                class="bd-placeholder-img"
+                width="300"
+                height="250"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="invalid-feedback">No hay amigos creados.</div>
+      </div>
+    </main>
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p class="col-md-4 mb-0 text-body-secondary">
+          &copy; 2024 Company, Inc
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</html>
